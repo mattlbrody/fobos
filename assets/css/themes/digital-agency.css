@@ -88,3 +88,21 @@ body {
 .bg-forestgreen {
   background: #228B22 !important;
 }
+
+.scienceImg {
+  height: 350px;
+}
+
+.scienceparawrap {
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scienceparagraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
