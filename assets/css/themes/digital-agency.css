@@ -89,20 +89,17 @@ body {
   background: #228B22 !important;
 }
 
-.scienceImg {
-  height: 350px;
-}
-
 .scienceparawrap {
   background-color: #efefef;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .scienceparagraph {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
 }
