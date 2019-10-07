@@ -115,3 +115,15 @@ body {
 a {
   color: #337ab7;
 }
+
+.center {
+  text-align: center;
+}
+
+.partnerLogoWrap {
+  padding: 50px 0;
+}
+
+.partnerLogo {
+  height: 60px;
+}
