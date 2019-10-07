@@ -103,3 +103,15 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.ld-gmap {
+  background-image: url("../../img/map.jpg")
+}
+
+.fancy-title.participate, .iconbox {
+  text-align: right;
+}
+
+a {
+  color: #337ab7;
+}
