@@ -127,3 +127,17 @@ a {
 .partnerLogo {
   height: 60px;
 }
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.logo-text {
+  position: relative;
+  top: 5px;
+}
+
+.instrumentImg {
+  height: 400px;
+  max-width: none;
+}
