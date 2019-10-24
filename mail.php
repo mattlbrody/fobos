@@ -7,31 +7,34 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="theme-color" content="#3ed2a7">
 	
-	<link rel="shortcut icon" href="../../favicon.png" />
+	<link rel="shortcut icon" href="./assets/img/favicon.ico" />
 	
 	<title>FOBOS Science</title>
 	
-	<link rel="stylesheet" href="../css/theme-vendors.min.css" />
-	<link rel="stylesheet" href="../css/theme.min.css" />
-	<link rel="stylesheet" href="../css/themes/digital-agency.css" />
+	<link rel="stylesheet" href="./assets/css/theme-vendors.min.css" />
+	<link rel="stylesheet" href="./assets/css/theme.min.css" />
+	<link rel="stylesheet" href="./assets/css/themes/digital-agency.css" />
 	
 	<!-- Head Libs -->
-	<script async src="../vendors/modernizr.min.js"></script>
+	<script async src="./assets/vendors/modernizr.min.js"></script>
 	
 </head>
 <body data-mobile-nav-trigger-alignment="right" data-mobile-nav-align="left" data-mobile-nav-style="minimal" data-mobile-nav-shceme="gray" data-mobile-header-scheme="gray" data-mobile-nav-breakpoint="1199">
-    <?php
-        $userName 		= $_POST['name'];
-        $userEmail	 	= $_POST['email'];
-        $userMessage 		= $_POST['message'];
-        $to 			= "mattlbrody@gmail.com";
-        $subject 		= "Email from FOBOS contact page";
-        $body 			= "Information Submitted:";
-        $body .= "\r\n Name: " . $userName;
-        $body .= "\r\n Email: " . $userEmail;
-        $body .= "\r\n Message: " . $userMessage;
-        mail($to, $subject, $body);
-    ?>
+	<?php
+		$name = $_POST['name'];
+		$email = $_POST['email'];
+		$message = $_POST['message'];
+
+		$formcontent="From: $name \n Email: $email \n Message: $message";
+
+		$recipient = 'westfall@ucolick.org'; //my email
+
+		$subject = "Email from FOBOS contact page";
+		$mailheader = "From: $email \r\n";
+		mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+		$home_url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']) . '/mail.php';
+			header('Location: ' . $home_url);
+	?>
 	<div id="wrap">
 		
 		<header class="main-header main-header-overlay">
@@ -46,8 +49,8 @@
 								<div class="navbar-header">
 									<a class="navbar-brand" href="index.html" rel="home">
 										<span class="navbar-brand-inner">
-											<img class="mobile-logo-default" src="../img/FOBOS_FINAL_LOGO.png" alt="Ave HTML Template">
-											<img class="logo-default" src="../img/FOBOS_FINAL_LOGO.png" alt="Ave HTML Template">
+											<img class="mobile-logo-default" src="./assets/img/FOBOS_FINAL_LOGO.png" alt="Ave HTML Template">
+											<img class="logo-default" src="./assets/img/FOBOS_FINAL_LOGO.png" alt="Ave HTML Template">
 										</span>
 									</a>
 									<button type="button" class="navbar-toggle collapsed nav-trigger style-mobile" data-toggle="collapse" data-target="#main-header-collapse" aria-expanded="false" data-changeclassnames='{ "html": "mobile-nav-activated overflow-hidden" }'>
@@ -68,7 +71,7 @@
 									<ul id="primary-nav" class="main-nav main-nav-hover-underline-1 nav align-items-lg-stretch justify-content-lg-center" data-submenu-options='{ "toggleType":"fade", "handler":"mouse-in-out" }' data-localscroll="true">
 										
 										<li>
-											<a href="../../index.html">
+											<a href="index.html">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
@@ -77,7 +80,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="../../science.html">
+											<a href="science.html">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
@@ -86,7 +89,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="../../instrument.html">
+											<a href="instrument.html">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
@@ -95,7 +98,7 @@
 											</a>
 										</li>
 										<li>
-											<a href="../../community.html">
+											<a href="community.html">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
@@ -104,7 +107,7 @@
 											</a>
 										</li>
 										<li class="is-active">
-											<a href="../../contact.html">
+											<a href="contact.html">
 												<span class="link-icon"></span>
 												<span class="link-txt">
 													<span class="link-ext"></span>
@@ -132,7 +135,7 @@
 			data-parallax="true"
 			data-parallax-options='{"parallaxBG":true}'
 			data-slideshow-bg="true"
-      data-slideshow-options='{"delay":6000000,"imageArray":["../img/campus2.jpg"]}'
+      data-slideshow-options='{"delay":6000000,"imageArray":["./assets/img/campus2.jpg"]}'
     >
 			<div class="container">
 				<div class="row">
@@ -244,9 +247,9 @@
 			</div><!-- /.container -->
 		</section>
 
-<script src="../vendors/jquery.min.js"></script>
-<script src="../js/theme-vendors.js"></script>
-<script src="../js/theme.min.js"></script>
+<script src="./assets/vendors/jquery.min.js"></script>
+<script src="./assets/js/theme-vendors.js"></script>
+<script src="./assets/js/theme.min.js"></script>
 
 </body>
 </html>

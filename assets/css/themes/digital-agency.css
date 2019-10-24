@@ -141,3 +141,34 @@ a {
   height: 480px;
   max-width: none;
 }
+
+.instrumentOverviewImgWrap {
+  text-align: center;
+}
+
+.instrumentOverviewImg {
+  height: 600px;
+  max-width: none;
+}
+
+.navbar-brand-inner {
+  display: flex;
+}
+
+.fio {
+  text-align: center;
+}
+
+.leadership h3 {
+  text-align: left;
+  padding-left: 40px;
+}
+
+@media only screen and (max-width: 1199px) {
+  .main-header .mainbar .navbar-header {
+    background-color: black;
+  }
+  .nav-trigger .bar {
+    background-color: white;
+  }
+}
