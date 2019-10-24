@@ -164,6 +164,12 @@ a {
   padding-left: 40px;
 }
 
+.page-404 {
+  padding-top: 20px;
+  padding-bottom: 0;
+  min-height: 100%;
+}
+
 @media only screen and (max-width: 1199px) {
   .main-header .mainbar .navbar-header {
     background-color: black;
