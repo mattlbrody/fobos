@@ -170,6 +170,10 @@ a {
   min-height: 100%;
 }
 
+.fancy-title a h2.coc {
+  font-size: 25px;
+}
+
 @media only screen and (max-width: 1199px) {
   .main-header .mainbar .navbar-header {
     background-color: black;
